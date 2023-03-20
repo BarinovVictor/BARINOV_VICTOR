@@ -37,6 +37,5 @@ public class HomeWork1 {
         double total = price + tax * quantity + sum;
 
         System.out.println(total);
-
     }
 }
