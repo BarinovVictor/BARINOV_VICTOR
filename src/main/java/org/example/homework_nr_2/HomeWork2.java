@@ -60,17 +60,12 @@ public class HomeWork2 {
         System.out.println(total);
 
         for(int a = 1; a <= 9; a++) {
-            if(a==1) {
-                System.out.println("*");
-                continue;
-            }
             System.out.print("*");
             for (int b = 1; b < a; b++) {
-                if (a - b == 1)
-                    System.out.println("*");
-                else
                     System.out.print("*");
             }
+            if(a != 9)
+            System.out.println("");
         }
     }
 
