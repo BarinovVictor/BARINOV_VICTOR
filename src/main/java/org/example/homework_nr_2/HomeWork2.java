@@ -4,9 +4,9 @@ public class HomeWork2 {
 
     public static void main(String[] args) {
 
-        int mounth = 10;
+        int month = 10;
 
-        switch (mounth) {
+        switch (month) {
             case 1:
                 System.out.println("January");
                 break;
@@ -43,7 +43,35 @@ public class HomeWork2 {
             case 12:
                 System.out.println("December");
                 break;
+        }
+        for(int index = 100; index <= 1000; index++){
+           if( index % 5 == 0 )
+            System.out.println(index);
+            }
 
+        float total = 0;
+
+        for(float nr1 = 1, nr2 = 3; nr1 <= 97 && nr2 <=99;nr1 += 2, nr2 += 2 ){
+            /* Решение с одной переменной
+            total += nr1 / (2 + nr1);
+            */
+            total += nr1 / nr2;
+        }
+        System.out.println(total);
+
+        for(int a = 1; a <= 9; a++) {
+            if(a==1) {
+                System.out.println("*");
+                continue;
+            }
+            System.out.print("*");
+            for (int b = 1; b < a; b++) {
+                if (a - b == 1)
+                    System.out.println("*");
+                else
+                    System.out.print("*");
+            }
         }
     }
+
 }
