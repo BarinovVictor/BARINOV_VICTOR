@@ -2,16 +2,20 @@ package org.example.homework_nr_3;
 
 public class TemperatureConverter {
 
-    public double toFahrenheit(double Celsius){
-        double p = 1.8;
-        return (Celsius * p) + 32;
+    double Temperature;
+
+    public TemperatureConverter(double temperature) {
+        Temperature = temperature;
     }
 
-    public double toCelsius(double Fahrenheit){
+    public double toFahrenheit(){
         double p = 1.8;
-        return (Fahrenheit - 32) / p;
+        return (Temperature * p) + 32;
     }
 
-    public static void main(String[] args){}
+    public double toCelsius(){
+        double p = 1.8;
+        return (Temperature - 32) / p;
+    }
 
 }
