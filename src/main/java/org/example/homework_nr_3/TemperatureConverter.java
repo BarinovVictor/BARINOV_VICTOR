@@ -12,7 +12,6 @@ public class TemperatureConverter {
         return (Fahrenheit - 32) / p;
     }
 
-    public static void main(String[] args){
-    }
+    public static void main(String[] args){}
 
 }
