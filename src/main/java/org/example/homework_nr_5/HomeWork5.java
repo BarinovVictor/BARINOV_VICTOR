@@ -25,23 +25,11 @@ enum Weekday{
     Sunday;
 
     public boolean isWeekDay(){
-      if (this != Weekday.Saturday || this != Weekday.Sunday){
-          return true;
-      }
-      else
-      {
-          return false;
-      }
+        return this != Weekday.Saturday || this != Weekday.Sunday;
     }
 
     public boolean isHoliday(){
-        if (this == Weekday.Saturday || this == Weekday.Sunday){
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return this == Weekday.Saturday || this == Weekday.Sunday;
     }
 }
 
@@ -57,7 +45,7 @@ public class HomeWork5 {
         System.out.println(Weekday.Monday.isWeekDay());
     }
 
-    boolean valueBolean = Boolean.parseBoolean("true");
+    boolean valueBoolean = Boolean.parseBoolean("true");
     byte valueByte = Byte.parseByte("120");
     short valueShort = Short.parseShort("32000");
     int valueInteger = Integer.parseInt("147895632");
