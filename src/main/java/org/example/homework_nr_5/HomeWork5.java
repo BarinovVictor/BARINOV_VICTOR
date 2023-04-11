@@ -1,35 +1,35 @@
 package org.example.homework_nr_5;
 
 enum MonthOfTheYear{
-    January,
-    February,
-    March,
-    April,
-    May,
-    June,
-    July,
-    August,
-    September,
-    October,
-    November,
-    December
+    JANUARY,
+    FEBRUARY,
+    MARCH,
+    APRIL,
+    MAY,
+    JUNE,
+    JULY,
+    AUGUST,
+    SEPTEMBER,
+    OCTOBER,
+    NOVEMBER,
+    DECEMBER
 }
 
 enum Weekday{
-    Monday,
-    Tuesday,
-    Wednesday,
-    Thursday,
-    Friday,
-    Saturday,
-    Sunday;
+    MONDAY,
+    TUSDAY,
+    WEDNESDAY,
+    THURSDAY,
+    FRIDAY,
+    SATURDAY,
+    SUNDAY;
 
     public boolean isWeekDay(){
-        return this != Weekday.Saturday || this != Weekday.Sunday;
+        return this != Weekday.SATURDAY || this != Weekday.SUNDAY;
     }
 
     public boolean isHoliday(){
-        return this == Weekday.Saturday || this == Weekday.Sunday;
+        return this == Weekday.SATURDAY || this == Weekday.SUNDAY;
     }
 }
 
@@ -42,7 +42,7 @@ public class HomeWork5 {
             System.out.println(MonthArray[index]);
         }
 
-        System.out.println(Weekday.Monday.isWeekDay());
+        System.out.println(Weekday.MONDAY.isWeekDay());
     }
 
     boolean valueBoolean = Boolean.parseBoolean("true");
