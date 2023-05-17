@@ -1,10 +1,7 @@
 package org.example.homework_nr_12;
 
 import javax.lang.model.util.ElementScanner6;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Main {
@@ -43,18 +40,16 @@ public class Main {
 
         System.out.println(employeeOnlyNames);
 
-        Optional<Employee> firstEmployee = Optional.of(employeeList.stream()
+        Optional<Employee> firstEmployee = employeeList.stream()
                 .filter(employee -> employee.getCanConductInterview() && employee.getPayedByHour())
-                .findFirst().get());
+                .findFirst();
 
         if (firstEmployee.isPresent()){
-            System.out.println(firstEmployee);}
+            System.out.println(firstEmployee.get());}
         else {System.out.println("Employee was not found!");};
 
         employeeList.stream()
-                .sorted((o1, o2) -> {
-                    return o1.getSurname().compareTo(o2.getSurname());
-                })
+                .sorted(Comparator.comparing(Employee::getSurname))
                 .forEach(employee -> System.out.println(employee.toString()));
     }
 }
